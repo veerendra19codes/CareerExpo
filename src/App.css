@@ -1,38 +1,511 @@
-.App {
+/* #121b2b
+#1c2341
+#394f6b
+#55bec0
+#6dffe7 */
+/* Reset  css*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Titillium+Web:wght@300;400;700&family=Ubuntu&display=swap');
+
+/* to use 1rem = 10px */
+:root {
+  font-size: 62.5%;
+  --color1: #121b2b;
+  --color2: #1c2341;
+  --color3: #394f6b;
+  --color4: #55bec0;
+  --color5: #6dffe7;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* or */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+.page-header {
+  font-size: 5rem;
+}
+
+.section-header {
+  font-size: 3.4rem;
+}
+
+.group-header {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+
+
+body {
+  height: 100vh;
+  background-color: var(--color4);
+  overflow-x: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  padding: 0 5rem;
+  background-color: var(--color1);
+  color: var(--color5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav .link {
+  margin: 0;
+  color: var(--color5);
+  text-decoration: none;
+  margin: 0 2rem
+}
+
+nav .link:hover {
+  color: var(--color4);
+  text-decoration: underline;
+}
+
+.navbar .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color4);
+  display: none;
+  opacity: 0;
+  font-size: 5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-btn {
+    display: block;
+    opacity: 1;
   }
+
+  .navbar nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--color1);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  .navbar .responsive_nav {
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav .link {
+    font-size: 1.5rem;
+  }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 
+.navbar {
+  width: 100%;
+  height: 8rem;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .link {
+  margin: 2rem;
+  padding: 0.8rem;
+  color: var(--color5);
+  text-decoration: none;
+  border-radius: 1.5rem;
+}
+
+.navbar .link:hover {
+  color: #fff;
+} */
+
+/* auth  */
+.auth {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+.auth form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  width: 50%;
+  height: 50rem;
+  margin: auto;
+  margin-top: 14rem;
 }
 
-.App-link {
-  color: #61dafb;
+.auth form .header {
+  color: var(--color2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth form .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth form input {
+  width: 22rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  border: 0.2rem solid #6dffe7;
+}
+
+/* .auth form input:active{
+  border: 2px solid #6dffe7;
+} */
+
+.btn {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--color1);
+  margin: 1rem;
+  color: var(--color4);
+  width: 10rem;
+}
+
+.btn:hover {
+  background-color: var(--color3);
+  color: var(--color5);
+}
+
+/* app/home  */
+.app {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 80px;
+}
+
+/* hero  */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: last baseline;
+  margin: 2rem;
+  margin-left: 10rem;
+}
+
+.content .header {
+  display: flex;
+  justify-content: left baseline;
+  font-weight: bolder;
+  color: var(--color3);
+}
+
+.content p {
+  display: flex;
+  justify-content: last baseline;
+  color: var(--color4);
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  padding-left: 10rem;
+}
+
+.image img {
+  object-fit: cover;
+  /* width: 50%; */
+  width: 60%;
+}
+
+/* client  */
+.client {
+  background: var(--color5);
+  padding: 5rem;
+}
+
+.header {
+  font-weight: bolder;
+  color: var(--color3);
+}
+
+p {
+  color: var(--color4);
+  margin: 0;
+}
+
+
+/* community  */
+.community {
+  padding: 5rem;
+}
+
+.subheader {
+  font-weight: bolder;
+  color: var(--color3);
+  padding-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+/* unlock */
+.unlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60rem;
+  background-color: var(--color5);
+}
+
+.unlock .image img {
+  width: 80%;
+}
+
+.unlock .content {
+  margin-left: 0;
+  margin-right: 10rem;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.email .form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 1.5rem auto;
+  align-items: center;
+  padding: 0;
+}
+
+.email .form input {
+  width: 22rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  padding-left: 1.5rem;
+  border: 0.2rem solid var(--color5);
+}
+
+.email .form textarea {
+  width: 22rem;
+  height: 10rem;
+  border-radius: 1.5rem;
+  padding-left: 1.5rem;
+  border: 2px solid var(--color5);
+}
+
+/* footer  */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--color1);
+  padding: 3rem;
+}
+
+.column {
+  text-align: left;
+}
+
+.column p {
+  padding: 0.3rem;
+}
+
+.column p:hover {
+  text-decoration: underline;
+}
+
+.column1 .socialmedia {
+  display: flex;
+  flex-direction: row;
+}
+
+.column1 .socialmedia .icon {
+  padding: 0.3rem;
+  color: #fff;
+}
+
+/* accordian */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.accordian {
+  width: 500px;
+}
+
+.accordian h1 {
+  color: var(--color3);
+  font-size: 34px;
+}
+
+.accordian .item {
+  background: var(--color2);
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+
+.accordian .item .title {
+  color: var(--color4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordian .item .title span {
+  font-size: 20px;
+}
+
+.accordian .content {
+  color: var(--color5);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  margin: 0;
+  text-align: left;
+}
+
+.accordian .content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+  margin-top: 5px;
+  text-align: left;
 }
