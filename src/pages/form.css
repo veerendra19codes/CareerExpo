@@ -1,0 +1,180 @@
+/* #121b2b
+#1c2341
+#394f6b
+#55bec0
+#6dffe7 */
+/* Reset  css*/
+@import url(https://db.onlinewebfonts.com/c/82346df2075cf90ed44a8e36099a87a8?family=Satoshi+Variable);
+
+/* to use 1rem = 10px */
+:root {
+    font-size: 62.5%%;
+    --color1: #121b2b;
+    --color2: #1c2341;
+    --color3: #394f6b;
+    --color4: #55bec0;
+    --color5: #6dffe7;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: "Satoshi Variable";
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* or */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+.page-header {
+    font-size: 5rem;
+}
+
+.section-header {
+    font-size: 3.4rem;
+}
+
+.group-header {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.form-app {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+form h1 {
+    padding-bottom: 10px;
+}
+
+form .personal {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color4);
+    border-radius: 15px;
+    width: 80%;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+form .educational {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color4);
+    border-radius: 15px;
+    width: 80%;
+    margin: 10px;
+    padding: 30px;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 5px;
+}
+
+form .inputs label {
+    width: 50%;
+    text-align: left;
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+form .inputs input {
+    padding: 3px;
+    border-radius: 15px;
+    padding-left: 10px;
+
+}

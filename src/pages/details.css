@@ -1,0 +1,175 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navbar component */
+
+.acm .navbar-component {
+    background: url("https://res.cloudinary.com/hnpb47ejt/image/upload/v1591305342/k5k3lhmaqvajchyaiqfr");
+    width: 100%;
+    height: 42vh;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: antiquewhite;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.acm section {
+    display: flex;
+    flex-direction: column;
+}
+
+.acm .navbar-component h1 {
+    /* position: relative; */
+
+    font-size: 6rem;
+    margin-right: 400px;
+}
+
+
+
+/* Css Starting from here */
+.acm .information-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.description-container {
+    text-align: left;
+    margin: auto;
+
+}
+
+.acm .description-container h2 {
+    margin-top: -75px;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    color: antiquewhite;
+    font-weight: 400;
+}
+
+.acm .description-container p {
+    font-size: 1.6rem;
+    width: 100%;
+    /* padding: 3.5px; */
+    padding-right: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.acm .description-header .image-description {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acm .description-header .image-description img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+
+}
+
+.acm .requirement-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.acm .requirement-container .row-chart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.acm .requirement-container h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    /* text-align: center; */
+    position: relative;
+    left: 45%;
+
+}
+
+.acm .requirement-panel {
+    padding-left: 200px;
+}
+
+.acm .requirement-panel ul {
+
+    text-align: left;
+    padding: 3px;
+    margin-top: 43px;
+}
+
+.acm .requirement-panel ul li {
+    list-style: none;
+}
+
+.acm .requirement-panel ul li p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.acm .salary-chart {
+    padding-left: 100px;
+}
+
+.acm .salary-chart img {
+    width: 500px;
+    height: 300px;
+}
+
+.acm .youtube-recommendation {
+    display: flex;
+    flex-direction: column;
+    /* gap: 8.1%; */
+    width: 100%;
+    margin: auto;
+}
+
+.acm .youtube-recommendation h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 150px;
+
+
+}
+
+
+.acm .recommendation-panel,
+.acm .course-panel {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: -45px;
+}
+
+.acm .recommendation-panel h3,
+.acm .course-panel h3 {
+    margin-bottom: 12px;
+    margin-top: 20%;
+    font-size: 2rem;
+}
+
+.acm .row-videos {
+    display: flex;
+    flex-direction: row;
+}
+
+.acm .description-header {
+    padding-right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

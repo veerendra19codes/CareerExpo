@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+.careerapp {
+    width: 100%;
+    height: 100%;
+
+}
+
+.careerapp .heading {
+    background: url("https://res.cloudinary.com/hnpb47ejt/image/upload/v1591305342/k5k3lhmaqvajchyaiqfr");
+    width: 100%;
+    height: 30vh;
+    color: white;
+}
+
+.careerapp .heading h3 {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.careerapp .careercontent {
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    background: var(--color2);
+
+}
+
+.careerapp .cardc {
+    margin: 50px auto;
+    max-width: 50%;
+    background-color: #f2f2f2;
+    display: flex;
+    border-radius: 20px;
+}
+
+.careerapp .cardc .img_container img {
+    border-radius: 20px;
+}
+
+.careerapp .cardc:hover {
+    box-shadow: 7px 7px 10px 5px rgb(0, 0, 0, 0.5);
+    transform: scale(1.01, 1.01);
+}
+
+.careerapp .career_heading {
+    padding: 40px;
+    font-size: 2.1rem;
+    font-weight: 500;
+    width: 20rem;
+}
+
+.careerapp .career_review {
+    margin-top: 45px;
+}
+
+.careerapp .career_review p {
+    margin-top: 5px;
+}
+
+.careerapp .career_salary {
+    margin: 45px 0 0 50px;
+}
+
+.careerapp .career_salary p {
+    margin-top: 5px;
+}
+
+.careerapp .arrow {
+    margin: 70px 0 0 80px;
+}
+
+.careerapp .search {
+    display: inline-block;
+    position: relative;
+    margin-top: 50px;
+}
+
+.careerapp .search input[type="text"] {
+    width: 370px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.careerapp .search button[type="submit"] {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.careercontent nav {
+    background-color: var(--color5);
+    padding: 30px;
+    margin-top: 0;
+    color: var(--color1);
+}
+
+.careercontent nav .link {
+    color: var(--color1);
+    font-size: 20px;
+}

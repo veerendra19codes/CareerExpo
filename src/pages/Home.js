@@ -4,6 +4,11 @@ import hero from "../assets/hero.png";
 import unlock from "../assets/unlock.png";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer.js";
+import  assessment from "../assets/assessment.png";
+import  career from "../assets/career.jpg";
+import dashboard  from "../assets/dashboard.png";
+import home from "../assets/home.jpg";
+import discord from "../assets/discord.jpg";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -56,6 +61,18 @@ export const Home = () => {
   };
   //emailjs ends
 
+  const handleAssessment = () => {
+    navigate("/assessment");
+  }
+
+  const handleCareer = () => {
+    navigate("/career");
+  }
+
+   const handleDashboard = () => {
+    navigate("/dashboard");
+  }
+
   return (
     <div className="app">
 
@@ -63,73 +80,82 @@ export const Home = () => {
       <div className="hero">
 
         <div className="content">
-          <div className="header page-header">Lessons and insights</div>
-          <div className="header page-header">from 8 years</div>
+          <div className="header page-header">Are you Ready</div>
+           <div className="header page-header">to Go Beyond?!</div>
+         
           <p>
-            Where to grow your business as a photograph: site or social media
+            Uncover your hidden talents and strengths through our specially designed assessments. We provide a series of quizzes, aptitude tests, and personality assessments that will help you identify your innate abilities and passions.
+          </p>
+           <p>
+         
           </p>
           <button className="btn" onClick={handleRegister}>
-            Register
+            Get Started
           </button>
         </div>
 
         <div className="image">
-          <img src={hero} alt="" />
+          <img src={home} alt="" />
         </div>
 
       </div>
 
       {/* client  */}
-      <div className="client">
+      <div className="aboutus">
 
-        <div className="header section-header">Our Clients</div>
-        <p>We have been working with some Fortune 500+ clients</p>
-        <div className="images">company logo images</div>
+        <div className="header section-header">About us</div>
+        <p>Welcome to our comprehensive Career Assessment platform, where we empower students like you to make informed decisions about your future. We understand that choosing a career can be a daunting task, but with our innovative tools and resources, you'll embark on a journey of self-discovery that will set you on the path to success.</p>
+        <div className="buttons">
+          <button className="btn" onClick={handleAssessment}>Start Assessment</button>
+          <button className="btn" onClick={handleCareer}>Career Options</button>
+          <button className="btn" onClick={handleDashboard}>Your Profile</button>
+        </div>
 
       </div>
 
-      {/* community  */}
-      <div className="community">
+      {/* ourservices  */}
+      <div className="ourservices">
 
         <div className="header section-header">
-          Manage your entire community
-          <br />
-          in a single system
+          Our Services
         </div>
-        <p>Who is Project_name suitable for?</p>
+        <p>Who is CareerExpo suitable for?</p>
 
         <div className="cards">
 
           <div className="card">
+            <div className="cardimage">
+              <img src={assessment} alt="" />
+            </div>
             <div className="subheader group-header">
-              Membership <br /> Organisations
+              Assessment
             </div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-              repudiandae possimus delectus dolorem iste explicabo illum
-              voluptas aliquid exercitationem suscipit.
+             Receive tailored career suggestions based on your assessment results, ensuring a perfect match for your unique profile.
             </p>
           </div>
 
           <div className="card">
+            <div className="cardimage">
+              <img src={career} alt="" />
+            </div>
             <div className="subheader group-header">
-              Membership <br /> Organisations
+              Career
             </div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-              repudiandae possimus delectus dolorem iste explicabo illum
-              voluptas aliquid exercitationem suscipit.
+            Explore a vast database of careers, complete with detailed descriptions, salary insights, educational pathways,current job market trends and demand for specific careers.
             </p>
           </div>
 
           <div className="card">
+            <div className="cardimage">
+              <img src={dashboard} alt="" />
+            </div>
             <div className="subheader group-header">
-              Membership <br /> Organisations
+              Dashboard
             </div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-              repudiandae possimus delectus dolorem iste explicabo illum
-              voluptas aliquid exercitationem suscipit.
+            Monitor your career journey with ease, accessing your assessment history and action plans right from your dashboard.
             </p>
           </div>
 
@@ -163,10 +189,10 @@ export const Home = () => {
       {/* accordian ends  */}
 
       {/* unlock  */}
-      <div className="unlock">
+      <div className="unlock discord">
 
         <div className="image">
-          <img src={unlock} alt="" />
+          <img src={discord} alt="" />
         </div>
 
         <div className="content">
@@ -211,19 +237,19 @@ export const Home = () => {
 
 const Data = [
   {
-    question : "Question1",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?"
+    question : "What is the purpose of a career assessment?",
+    answer: "Career assessments help you identify your strengths, interests, and values, guiding you towards suitable career paths by aligning your skills and preferences with potential careers."
   },
   {
-    question : "Question2",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?"
+    question : "Are career assessment results definitive, or can they change over time?",
+    answer: "Assessment results can evolve as you gain new experiences and insights. They serve as a starting point, but it's normal for your interests and career preferences to shift as you grow."
   }, 
   {
-    question : "Question3",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?"
+    question : "QHow do I interpret my assessment results?",
+    answer: "Your results will highlight your strengths and interests. Consider them as valuable clues rather than strict directives. It's essential to explore and research careers that align with your results to make an informed choice."
   }, 
   {
-    question : "Question4",
-    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, similique?"
+    question : "Can I use career assessments if I'm unsure about my major or career path in college?",
+    answer: " Absolutely! Career assessments are helpful tools for college students exploring majors and career options. They can provide valuable insights and direction during your academic journey."
   },
 ]
