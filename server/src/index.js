@@ -11,6 +11,7 @@ import "dotenv/config.js";
 
 
 const app = express();
+const PORT = process.env.PORT || 3001
 
 // middleware so that whatever data is received from frontend is converted into json for backend
 app.use(express.json());
@@ -21,10 +22,6 @@ app.use(cors());
 // routename,  routefile
 app.use("/auth", userRouter);
 // app.use("/recipes", recipesRouter);
-
-// const mongo_password = process.env.MONGO_PASSWORD ;
-// const connection_url = "mongodb+srv://veerendrarecipes:"+mongo_password+"@recipes.2odttpv.mongodb.net/recipes";
-// console.log(connection_url);
 
 const MONGO_URL = process.env.MONGO_URL ;
 
