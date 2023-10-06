@@ -9,7 +9,6 @@ import { userRouter } from "./routes/users.js"
 // import { recipesRouter } from "./routes/recipes.js";
 import "dotenv/config.js";
 
-
 const app = express();
 const PORT = process.env.PORT || 3001
 
@@ -27,6 +26,6 @@ const MONGO_URL = process.env.MONGO_URL ;
 
 mongoose.connect(MONGO_URL);
 
-app.listen(3001, (req, res) => {
+app.listen(PORT, (req, res) => {
     console.log("server started");
 });
