@@ -1,4 +1,3 @@
-import { UserCircle,GraduationCap } from "lucide-react";
 import "./dashboard.css";
 import { useNavigate } from "react-router-dom";
 import Boy1 from "../assets/boy1.jpg";
@@ -17,21 +16,13 @@ import RechartsExample4 from "../graphs/RechartsExample4.js";
 export const Dashboard = () => {
        const {
         name,
-        setName,
         location,
-        setLocation,
         age,
-        setAge,
         gender,
-        setGender,
         hobbies,
-        setHobbies,
         pastQualification,
-        setPastQualification,
         currentQualification,
-        setCurrentQualification,
         futureJobs,
-        setFutureJobs,
   } = useContext(AppContext);
 
     const navigate = useNavigate();

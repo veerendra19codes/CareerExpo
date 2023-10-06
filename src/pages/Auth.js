@@ -18,8 +18,8 @@ export const Auth = () => {
 
 const Login = () => {
 
-    const [username, setUsername] = useState(null);
-    const [password, setPassword] = useState(null);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     //defining a useCookies hook      //name of cookie(access_token)
     const [_, setCookies] = useCookies(["access_token"]);
 
@@ -61,8 +61,8 @@ const Login = () => {
 
 const Register = () => {
 
-    const [username, setUsername] = useState(null);
-    const [password, setPassword] = useState(null);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     const onSubmit = async (event) => {
         //this prevent page from refreshing on submit
@@ -109,7 +109,6 @@ onSubmit}) => {
                     <label htmlFor="username"> Username: </label>
                     <input
                         type="text"
-                        id="username"
                         value={username}
                         onChange={(event) => setUsername(event.target.value)}
                     />
@@ -118,7 +117,6 @@ onSubmit}) => {
                     <label htmlFor="password"> Password: </label>
                     <input 
                         type="password" 
-                        id="password" 
                         value={password}
                         onChange={(event) => setPassword(event.target.value)} 
                     />

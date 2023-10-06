@@ -1,14 +1,14 @@
-import React,{ useState, useEffect } from "react";
+import React,{ useState} from "react";
 // import './App.css';
 import { Data } from "./Data.jsx";
 import { CareerComponent } from "./CareerComponent.js";
 // import  {FinancialAnalyst}  from "./Pages/FinancialAnalyst";
 import "./details.css";
-import { useNavigate,NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export const Career = ()  => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [link, setLink] = useState("");
 
 

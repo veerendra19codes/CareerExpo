@@ -9,7 +9,7 @@ export const CareerComponent = (props) => {
         <>
                 <div className="cardc">
                     <div className="img_container">
-                        <img src={props.imgsrc} alt="remote image" />
+                        <img src={props.imgsrc} alt="remote" />
                     </div>
                     <div className="career_heading">
                         <h3>{props.title}</h3>

@@ -8,21 +8,13 @@ import { useContext } from "react";
 export const Form = () => {
 
     const {
-        name,
         setName,
-        location,
         setLocation,
-        age,
         setAge,
-        gender,
         setGender,
-        hobbies,
         setHobbies,
-        pastQualification,
         setPastQualification,
-        currentQualification,
         setCurrentQualification,
-        futureJobs,
         setFutureJobs,
   } = useContext(AppContext);
 

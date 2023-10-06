@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import hero from "../assets/hero.png";
-import unlock from "../assets/unlock.png";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer.js";
 import  assessment from "../assets/assessment.png";
@@ -9,8 +7,10 @@ import  career from "../assets/career.jpg";
 import dashboard  from "../assets/dashboard.png";
 import home from "../assets/home.jpg";
 import discord from "../assets/discord.jpg";
+// import 'dotenv/config';
 
 export const Home = () => {
+
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
 
@@ -46,8 +46,8 @@ export const Home = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_77pkuhw',
-      'template_x71f6hm', form.current, 'RqoffOUYxNIWQ4zkH'
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_ID
       )
       .then((result) => {
           console.log(result.text);

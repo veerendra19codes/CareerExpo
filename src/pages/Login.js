@@ -1,4 +1,4 @@
-import { useState , useContext} from "react";
+import { useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App.js";
 import axios from "axios";
@@ -19,10 +19,6 @@ export const Login = () => {
 
   const handleLogin = () => {
     navigate("/");
-  };
-
-  const login = () => {
-    console.log("login");
   };
 
   const onSubmit = async (event) => {

@@ -7,21 +7,21 @@ import { Dashboard} from "./pages/Dashboard.js";
 import { Auth } from "./pages/Auth.js";
 import { Login } from "./pages/Login.js";
 import { Navbar } from "./components/Navbar.js";
-import { Footer } from "./components/Footer.js";
+// import { Footer } from "./components/Footer.js";
 import { AccountManager } from "./pages/AccountManager.jsx";
 import { ArtificialEngineer } from "./pages/ArtificialEngineer.jsx";
 import { FullStackdeveloper } from "./pages/FullStackDeveloper.jsx";
 import { Lawyer } from "./pages/Lawyer.jsx";
 import { SportsManager } from "./pages/SportsManager.jsx";
 import { Surgeon } from "./pages/Surgeon.jsx";
-
 import { Form } from "./pages/Form.js";
+import "./App.css";
+
 
 // import Chatbot from "./components/Chatbot";
 
 
 
-import "./App.css";
 
 export const AppContext = createContext();
 
@@ -75,11 +75,6 @@ function App() {
           <Route path="/sportsmng" element={<SportsManager />} />
           <Route path="/lawyer" element={<Lawyer />} />
           <Route path="/surgeon" element={<Surgeon />} />
-
-
-
-
-          
         </Routes>
         {/* <Chatbot /> */}
       </Router>
